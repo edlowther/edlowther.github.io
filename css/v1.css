@@ -21,8 +21,6 @@ body {
 }
 
 .project {
-	width: 50/*%*/; 
-	/*height: 100px;*/
 	position: relative;
 	margin-bottom: 12px; 
 	padding: 5px;
@@ -32,10 +30,6 @@ body {
 	font-weight: bold;
 }
 
-/*.left {
-	float: left;
+li {
+    list-style-type: none;
 }
-
-.right {
-	float: right;
-}*/
