@@ -1,3 +1,41 @@
 * {
 	font-family: Helvetica,Arial,freesans,sans-serif; 
+	color: #505050;
+	line-height: 24px;
 }
+
+body {
+	background-image: url("../img/orange_2100x_75y.png");
+	background-repeat: no-repeat;
+}
+
+.container {
+	max-width: 700px; 
+	margin: 0 auto;
+}
+
+.headline {
+	color: #000;
+	font-family: "BOOK ANTIQUA", "Hoefler Text", Times New Roman, Times, serif;
+	letter-spacing: 3px;
+}
+
+.project {
+	width: 50/*%*/; 
+	/*height: 100px;*/
+	position: relative;
+	margin-bottom: 12px; 
+	padding: 5px;
+}
+
+.strong {
+	font-weight: bold;
+}
+
+/*.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}*/
