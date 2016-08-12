@@ -11,7 +11,7 @@ function initialize(map, layer, filterWhere) {
     mapDiv.style.width = isMobile ? '100%' : '700px';
     mapDiv.style.height = isMobile ? '500px' : '500px';
     if (isMobile) {
-      var container = document.getElementsByClassName("container");
+      var container = document.getElementsByClassName("container")[0];
       container.style.width = '100%'; 
     }; 
     map = new google.maps.Map(mapDiv, {
