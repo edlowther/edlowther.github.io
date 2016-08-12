@@ -10,8 +10,8 @@ function initialize(map, layer, filterWhere) {
     var mapDiv = document.getElementById('googft-mapCanvas');
     mapDiv.style.width = isMobile ? '100%' : '700px';
     mapDiv.style.height = isMobile ? '500px' : '500px';
-    var container = document.getElementsByClassName("container");
     if (isMobile) {
+      var container = document.getElementsByClassName("container");
       container.style.width = '100%'; 
     }; 
     map = new google.maps.Map(mapDiv, {
