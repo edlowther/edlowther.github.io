@@ -8,8 +8,8 @@ function initialize(map, layer, filterWhere) {
       viewport.setAttribute('content', 'initial-scale=1.0, user-scalable=no');
     }
     var mapDiv = document.getElementById('googft-mapCanvas');
-    mapDiv.style.width = isMobile ? '100%' : '700px';
-    mapDiv.style.height = isMobile ? '100%' : '500px';
+    // mapDiv.style.width = isMobile ? '100%' : '700px';
+    // mapDiv.style.height = isMobile ? '100%' : '500px';
     map = new google.maps.Map(mapDiv, {
       center: new google.maps.LatLng(52.2, -1.6),
       zoom: 7,
@@ -32,22 +32,22 @@ function initialize(map, layer, filterWhere) {
       }
     });
 
-    if (isMobile) {
-      var legend = document.getElementById('googft-legend');
-      var legendOpenButton = document.getElementById('googft-legend-open');
-      var legendCloseButton = document.getElementById('googft-legend-close');
-      legend.style.display = 'none';
-      legendOpenButton.style.display = 'block';
-      legendCloseButton.style.display = 'block';
-      legendOpenButton.onclick = function() {
-        legend.style.display = 'block';
-        legendOpenButton.style.display = 'none';
-      }
-      legendCloseButton.onclick = function() {
-        legend.style.display = 'none';
-        legendOpenButton.style.display = 'block';
-      }
-    }
+    // if (isMobile) {
+    //   var legend = document.getElementById('googft-legend');
+    //   var legendOpenButton = document.getElementById('googft-legend-open');
+    //   var legendCloseButton = document.getElementById('googft-legend-close');
+    //   legend.style.display = 'none';
+    //   legendOpenButton.style.display = 'block';
+    //   legendCloseButton.style.display = 'block';
+    //   legendOpenButton.onclick = function() {
+    //     legend.style.display = 'block';
+    //     legendOpenButton.style.display = 'none';
+    //   }
+    //   legendCloseButton.onclick = function() {
+    //     legend.style.display = 'none';
+    //     legendOpenButton.style.display = 'block';
+    //   }
+    // }
     return {
       'map': map, 
       'layer': layer
