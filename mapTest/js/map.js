@@ -8,8 +8,8 @@ function initialize(map, layer, filterWhere) {
       viewport.setAttribute('content', 'initial-scale=1.0, user-scalable=no');
     }
     var mapDiv = document.getElementById('googft-mapCanvas');
-    // mapDiv.style.width = isMobile ? '100%' : '700px';
-    // mapDiv.style.height = isMobile ? '100%' : '500px';
+    mapDiv.style.width = isMobile ? '500px' : '700px';
+    mapDiv.style.height = isMobile ? '700px' : '500px';
     map = new google.maps.Map(mapDiv, {
       center: new google.maps.LatLng(52.2, -1.6),
       zoom: 7,
