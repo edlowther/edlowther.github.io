@@ -1,0 +1,46 @@
+(function() {
+	$(document).ready( function() {
+
+		var readerDistanceInput = $('#readerDistance'); 
+		var readerDistanceValue = parseFloat(readerDistanceInput.val()); 
+		var distancePluralSpan = $('#distancePlural'); 
+
+		var readerTimeInput = $('#readerTime'); 
+		var readerTimeValue = parseFloat(readerTimeInput.val()); 
+		var timePluralSpan = $('#timePlural'); 
+
+		var submitButton = $('#submit'); 
+
+		var resultsDiv = $('#results'); 
+
+		var readerSpeedSpan = $('#readerSpeed'); 
+		var teamGBTimeSpan = $('#teamGBTime'); 
+
+		readerDistanceInput.on('change', function() {
+			readerDistanceValue = parseFloat(readerDistanceInput.val());  
+			if (readerDistanceValue === 1.0) {
+				distancePluralSpan.hide(); 
+			} else {
+				distancePluralSpan.show(); 
+			}
+		}); 
+
+		readerTimeInput.on('change', function() {
+			readerTimeValue = parseFloat(readerTimeInput.val());  
+			if (readerTimeValue === 1.0) {
+				timePluralSpan.hide(); 
+			} else {
+				timePluralSpan.show(); 
+			}
+		}); 
+
+		submitButton.on('click', function() {
+			var readerSpeed = Math.round((readerDistanceValue / readerTimeValue) * 60 * 10) / 10; 
+			readerSpeedSpan.text(readerSpeed); 
+			teamGBTimeSpan.text(Math.round((readerDistanceValue / 37) * 60)); 
+			resultsDiv.show(); 
+		}); 
+
+
+	})
+})(); 
