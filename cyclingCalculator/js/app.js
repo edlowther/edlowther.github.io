@@ -41,19 +41,34 @@
 			resultsDiv.show(); 
 		}); 
 
-		var baseUrl = 'https://maps.googleapis.com/maps/api/directions/json?origin=New+York,+NY&destination=Boston,+MA&key=AIzaSyDA15h8Tc8heTEyBaip3detK9sjgX1Yq7Y';
 
-        $.ajax({
-            url: baseUrl,
-            type: 'GET', 
-            dataType: 'json',
-            success: function (response) {
-            	console.log(response); 
-            },
-            error: function (e) {
-            	console.log(e); 
-            }
+		var directionsService = new google.maps.DirectionsService;
+
+		directionsService.route({
+          origin: "New+York,+NY",
+          destination: "Boston,+MA",
+          travelMode: 'DRIVING'
+        }, function(response, status) {
+          if (status === 'OK') {
+            console.log(response);
+          } else {
+            window.alert('Directions request failed due to ' + status);
+          }
         });
+
+		// var baseUrl = 'https://maps.googleapis.com/maps/api/directions/json?origin=New+York,+NY&destination=Boston,+MA&key=AIzaSyDA15h8Tc8heTEyBaip3detK9sjgX1Yq7Y';
+
+  //       $.ajax({
+  //           url: baseUrl,
+  //           type: 'GET', 
+  //           dataType: 'json',
+  //           success: function (response) {
+  //           	console.log(response); 
+  //           },
+  //           error: function (e) {
+  //           	console.log(e); 
+  //           }
+  //       });
 
 
 	})
