@@ -41,6 +41,20 @@
 			resultsDiv.show(); 
 		}); 
 
+		var baseUrl = 'https://maps.googleapis.com/maps/api/directions/json?origin=New+York,+NY&destination=Boston,+MA&key=AIzaSyDA15h8Tc8heTEyBaip3detK9sjgX1Yq7Y';
+
+        $.ajax({
+            url: baseUrl,
+            type: 'GET', 
+            dataType: 'json',
+            success: function (response) {
+            	console.log(response); 
+            },
+            error: function (e) {
+            	console.log(e); 
+            }
+        });
+
 
 	})
 })(); 
