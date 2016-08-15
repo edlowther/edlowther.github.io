@@ -9,8 +9,12 @@ body {
 	margin: 0 auto;
 }
 
-.inputs {
+.numberInput {
 	width: 40px; 
+}
+
+.textInput {
+	width: 80px;
 }
 
 .small {

@@ -11,19 +11,24 @@
 
 		var submitButton = $('#submit'); 
 
+		var getDistanceButton = $('#getDistance'); 
+
 		var resultsDiv = $('#results'); 
 
 		var readerSpeedSpan = $('#readerSpeed'); 
 		var teamGBTimeSpan = $('#teamGBTime'); 
 
-		readerDistanceInput.on('change', function() {
+		function updateReaderDistance() {
+			console.log("called"); 
 			readerDistanceValue = parseFloat(readerDistanceInput.val());  
 			if (readerDistanceValue === 1.0) {
 				distancePluralSpan.hide(); 
 			} else {
 				distancePluralSpan.show(); 
 			}
-		}); 
+		}
+
+		readerDistanceInput.on('change', updateReaderDistance()); 
 
 		readerTimeInput.on('change', function() {
 			readerTimeValue = parseFloat(readerTimeInput.val());  
@@ -44,17 +49,24 @@
 
 		var directionsService = new google.maps.DirectionsService;
 
-		directionsService.route({
-          origin: "New+York,+NY",
-          destination: "Boston,+MA",
-          travelMode: 'DRIVING'
-        }, function(response, status) {
-          if (status === 'OK') {
-            console.log(response);
-          } else {
-            window.alert('Directions request failed due to ' + status);
-          }
-        });
+        getDistanceButton.on('click', function() {
+
+        	var origin = $('#homePostcode').val(); 
+        	var destination = $('#workPostcode').val(); 
+
+			directionsService.route({
+	          origin: origin,
+	          destination: destination,
+	          travelMode: 'BICYCLING'
+	        }, function(response, status) {
+	          if (status === 'OK') {
+	          	var distanceInMetres = response.routes[0].legs[0].distance.value; 
+	            readerDistanceInput.val(distanceInMetres * 0.000621371); 
+	          } else {
+	            window.alert('Directions request failed due to ' + status);
+	          }
+	        });
+        })
 
 		// var baseUrl = 'https://maps.googleapis.com/maps/api/directions/json?origin=New+York,+NY&destination=Boston,+MA&key=AIzaSyDA15h8Tc8heTEyBaip3detK9sjgX1Yq7Y';
 
