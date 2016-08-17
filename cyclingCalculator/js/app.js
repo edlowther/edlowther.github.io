@@ -77,7 +77,7 @@
             $('.' + olympianCyclist.class + '.totalDuration.minutes').text(olympianMinutes);
             var olympianSeconds = Math.round((olympianTime - olympianMinutes) * 60);
             if (olympianSeconds > 0) {
-                $('.' + olympianCyclist.class + '.totalDuration.seconds').text(' and ' + olympianSeconds + ' seconds ');
+                $('.' + olympianCyclist.class + '.totalDuration.seconds').text(' and ' + olympianSeconds + ' seconds');
             };
             var olympianSpeedMultiple = Math.round(olympianCyclist.speed / readerSpeed * 10) / 10;
             $('.' + olympianCyclist.class + '.multiple').text(olympianSpeedMultiple);
