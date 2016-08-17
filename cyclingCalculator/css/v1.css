@@ -45,3 +45,12 @@ img {
 .surprisingResult {
     display: none; 
 }
+
+@media (max-width: 600px) {
+	img {
+        width: 30%; 
+    }
+    #map {
+        width: 80%; 
+    }
+}
