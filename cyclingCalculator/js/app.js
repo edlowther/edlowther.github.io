@@ -191,6 +191,9 @@
                 }
             });
             $('#results').show();
+            $('html,body').animate({
+                scrollTop: $("#results").offset().top},
+                'slow');
         }); 
 
         setUpMap();
