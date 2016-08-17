@@ -192,7 +192,7 @@
             });
             $('#results').show();
             $('html,body').animate({
-                scrollTop: $("#results").offset().top},
+                scrollTop: $("#map").offset().top},
                 'slow');
         }); 
 
