@@ -48,7 +48,7 @@ img {
 
 @media (max-width: 600px) {
 	img {
-        width: 30%; 
+        width: 50%; 
     }
     #map {
         width: 80%; 
