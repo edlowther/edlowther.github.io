@@ -1,30 +1,68 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-  <meta charset="utf-8">
-  <title>Cycling calculator</title>
-  <link rel="stylesheet" type="text/css" href="css/v1.css" />
-  <link rel="stylesheet" type="text/css" href="lib/jquery-ui.min.css" />
-  <script type="text/javascript" src="./lib/jquery-3.1.0.min.js"></script>
-  <script type="text/javascript" src="./lib/jquery-ui.min.js"></script>
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDA15h8Tc8heTEyBaip3detK9sjgX1Yq7Y"></script>
-  <script type="text/javascript" src="./js/app.js"></script>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Cycling calculator</title>
+    <link rel="stylesheet" type="text/css" href="css/v1.css" />
+    <link rel="stylesheet" type="text/css" href="lib/jquery-ui.min.css" />
+    <script type="text/javascript" src="./lib/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="./lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDA15h8Tc8heTEyBaip3detK9sjgX1Yq7Y"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
+    <script type="text/javascript" src="./js/olympianCyclistData.js"></script>
 </head>
 
 <body>
-  <div class="container">
-    <h2>Cycling calculator</h2>
-    <div>My commute is <input type="number" class="numberInput" id="readerDistance" value="5" max="100"/> mile<span id="distancePlural">s</span>, and it takes me <input type="number" class="numberInput" id="readerTime" value="30" max="100"/> minute<span id="timePlural">s</span> to get to work.</div>
-    <div id="unsure">Unsure of how long your route is? <br />Enter your full home postcode <input type="text" class="textInput" id="homePostcode" value="SW1A 0AA" /> and work postcode <input type="text" class="textInput" id="workPostcode" value="W1A 1AA" /> <input type="submit" id="getDistance" value="Find out"/><br />
-    <div id="map"></div>  
-    <input type="submit" id="submit" value="Calculate"/>
-    <div id="results">
-      <p>You travel at an average speed of <span id="readerSpeed"></span> miles per hour. </p>
-      <p>Team GB could do your commute in <span id="teamGBTime"></span> minutes*.</p>
-      <p class="small">*Assuming somebody layed some track, levelled your route out and diverted all traffic and pedestrians.<p>
-    </div>
+    <div class="container">
+        <h2>Cycling calculator: Commuters v Olympic champions</h2>
+        <p>How do the top speeds of the world's best cyclists compare with your own blistering pace on your cycle to work?</p>
+        <div id="unsure">My full home postcode is
+            <input type="text" class="textInput" id="homePostcode" value="SW1A 0AA" />and my work postcode is
+            <input type="text" class="textInput" id="workPostcode" value="W1A 1AA" />
+            <input type="submit" id="getDirections" value="Get route" />
+            <br />
+            <div id="map"></div>
+            <div class="stepTwo">
+                <p>My commute is <span id="readerDistance"></span> mile<span id="distancePlural">s</span> long. It takes me
+                    <input type="number" class="numberInput" id="readerTime" value="30" max="100" />minute<span id="timePlural">s</span> to get to work.
+                    <p>
+            </div>
+            <input class="stepTwo" type="submit" id="calculate" value="Compare me to the Olympians" />
+            <div id="results">
+                <p>My average speed is <span id="readerSpeed"></span> miles per hour.</p>
+                <p class="surprisingResult fast emphasis">Good grief! You are a phenomenon! Have you considered applying for the Tokyo games?</p>
+                <p class="surprisingResult slow emphasis">Have you considered removing those stabilisers? </p>
+                <div id="resultsData">
+                    <h3>Time trial</h3>
+                    <img src="./img/cancellera.jpg" />
+                    <p>Swiss cyclist Fabian Cancellara won the time trial, covering 33.9 miles in one hour, 12 minutes and 15 seconds. His average speed was 28.3mph.</p>
+                    <p class="comparison emphasis">This is <span class="timeTrial multiple"></span> times faster than you.</p>
+                    <p>He could easily do your commute in <span class="timeTrial totalDuration minutes"></span> minutes <span class="timeTrial totalDuration seconds"></span> (if the route was closed to other vehicles and pedestrians, and the traffic lights were switched off).</p>
+                    <p class="comparison emphasis">You would still be at the red marker on the map by the time he got to your office.</p>
+                    <h3>Road race</h3>
+                    <img src="./img/avermaet.jpg" />
+                    <p>Amazingly, the fastest competitors in the Olympic road race, which covered a distance about four and a half times that of the time trial, went just 4mph slower than Cancellara, demonstrating both their extraordinary endurance and the benefits of sheltering in the slipstream of similarly powerful riders. </p>
+                    <p class="comparison emphasis">This is still <span class="roadRace multiple"></span> times faster than you.</p>
+                    <p>Greg Van Avermaet, the winner, could do your commute in <span class="roadRace totalDuration minutes"></span> minutes <span class="roadRace totalDuration seconds"></span> (also in the conditions described above).</p>
+                    <p>He would then be able to keep going for a while: he maintained that average speed in the road race for over six hours and 10 minutes on a particularly gruelling hill-filled course. </p>
+                    <h3>Team pursuit</h3>
+                    <img src="./img/teamPursuit.jpg" />
+                    <p>Okay, so this one is a bit of a stretch. But what if the roads on your commute were emptied, the traffic lights switched off, any hills or valleys were ironed out in a gargantuan engineering project, perfectly smooth wooden track installed throughout with positive camber on the corners, and the climate where you live happened to match perfectly the atmospheric conditions in the Rio velodrome?</p>
+                    <p>The Olympic champion team pursuit squad (well, three of them) would be able to cover 4km of your route in just over three minutes 50 seconds: an average speed of 38.9mph.</p>
+                    <p class="comparison emphasis">This is a whopping <span class="teamPursuit multiple"></span> times faster than your average speed.</p> 
+                    <p>Were they able to maintain that pace for the duration, they would get to your office in <span class="teamPursuit totalDuration minutes"></span> minutes <span class="teamPursuit totalDuration seconds"></span>.</p>
+                    
+                    <h3>Sprinter</h3>
+                    <img src="./img/kenny.jpg" />
+                    <p>The fastest person on a bike in Rio was Britain's Jason Kenny, whose top speed was 48.8mph, achieved in qualifying for the individual sprint.</p>
+                    <p class="comparison emphasis">This is <span class="sprint multiple"></span> times faster than you.</p>
+                    <p>Were the improbable conditions above replicated, and if he were able to maintain this speed over the length of your commute instead of just 200m on the track (I know, I know), he would be pulling up outside your place of work after just <span class="sprint totalDuration minutes"></span> minutes <span class="sprint totalDuration seconds"></span>.</p>
+                </div>
+            </div>
 
-  </div>
+        </div>
 </body>
+
 </html>

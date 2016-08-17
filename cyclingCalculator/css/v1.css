@@ -21,6 +21,27 @@ body {
 	font-size: 10px; 
 }
 
+#map {
+	width: 700px;
+	height: 300px;
+}
+
 #results {
 	display: none; 
+}
+
+.stepTwo {
+	display: none; 
+}
+
+img {
+    float: right; 
+}
+
+.emphasis {
+    font-weight: bold; 
+}
+
+.surprisingResult {
+    display: none; 
 }
