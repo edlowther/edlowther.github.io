@@ -145,7 +145,7 @@
                                     marker = new google.maps.Marker({
                                         position: destinations[0],
                                         map: map, 
-                                        icon: './img/bikeIconYou.png'
+                                        icon: './img/bikeIconYou_v2.png'
                                     })
                                 }
                             }
