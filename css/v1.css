@@ -1,4 +1,4 @@
-* {
+h3, p, a {
 	font-family: Helvetica,Arial,freesans,sans-serif; 
 	color: #505050;
 	line-height: 24px;
@@ -21,15 +21,39 @@ body {
 }
 
 .project {
+	width: 100%; 
+	/*height: 100px;*/
 	position: relative;
 	margin-bottom: 12px; 
 	padding: 5px;
+}
+
+.project img {
+	width: 100%; 
+}
+
+.project li {
+	list-style-type: none;
 }
 
 .strong {
 	font-weight: bold;
 }
 
-li {
-    list-style-type: none;
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 720px) {
+	.project span {
+		display: block;
+	}
+	.project span .colon {
+		display: none; 
+	}
 }

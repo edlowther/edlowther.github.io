@@ -1,0 +1,56 @@
+body {
+	font-family: Helvetica,Arial,freesans,sans-serif; 
+	color: #505050;
+	line-height: 24px;
+}
+
+.container {
+	max-width: 700px; 
+	margin: 0 auto;
+}
+
+.numberInput {
+	width: 40px; 
+}
+
+.textInput {
+	width: 80px;
+}
+
+.small {
+	font-size: 10px; 
+}
+
+#map {
+	width: 700px;
+	height: 300px;
+}
+
+#results {
+	display: none; 
+}
+
+.stepTwo {
+	display: none; 
+}
+
+img {
+    float: right; 
+}
+
+.emphasis {
+    font-weight: bold; 
+}
+
+.surprisingResult {
+    display: none; 
+}
+
+@media (max-width: 600px) {
+	img {
+        width: 50%; 
+    }
+    #map {
+        width: 80%; 
+    }
+}

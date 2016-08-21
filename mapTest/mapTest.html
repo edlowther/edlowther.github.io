@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport"></meta>
+  <title>Find a good nursery (beta)</title>
+  <link rel="stylesheet" type="text/css" href="css/v1.css" />
+  <script type="text/javascript" src="https://maps.google.com/maps/api/js?v=3&key=AIzaSyCBSSVwKewIscE22gLQqPxArKvBlxTqv3U"></script>
+  <script type="text/javascript" src="./lib/jquery-3.1.0.min.js"></script>
+  <script type="text/javascript" src="./js/data_v1.js"></script>
+  <script type="text/javascript" src="./js/map.js"></script>
+  <script type="text/javascript" src="./js/app.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Find a good nursery (beta)</h2>
+    <h4>Enter your postcode <input type="text" id="postcode" size=10>, or explore the map</h4>
+    <p>Show nurseries rated: 
+    <form id="filters">
+      <input type="checkbox" class="nurseryRating" value="large_green" checked>Outstanding
+      <input type="checkbox" class="nurseryRating" value="large_blue" checked>Good
+      <input type="checkbox" class="nurseryRating" value="large_yellow" checked>Satisfactory
+      <input type="checkbox" class="nurseryRating" value="large_red" checked>Requires improvement
+      <input type="checkbox" class="nurseryRating" value="measle_turquoise" checked>No report available
+    </form>
+    <div id="googft-mapCanvas"></div>
+    <div id="googft-legend"></div>
+    <div id="googft-legend-open"></div>
+    <div id="googft-legend-close"></div>
+    <h3>About this page</h3>
+    <p>There are some excellent resources for finding Ofsted ratings for schools in your area, like <a href="http://www.locrating.com/">locrating.com</a>, and for finding childminders in a particular area, like <a href="https://www.childcare.co.uk/">childcare.co.uk</a>, but we struggled to find an easy way to explore the locations and ratings of nurseries. This seemed like a shame, because a map is especially useful in the case of nurseries, where parents may be less reliant on catchment areas and more likely to consider a location near to work or on a commute. So I decided to try to make one. </p>
+    <p>The map shows the location of every organisation listed as "childcare on non-domestic premises" on Ofsted's website (which I think I am right in saying that locrating does not) and those categoriesed as nurseries (which locrating does have, but did not always seem to have the latest report for), and tries to give the most up-to-date information possible on each of these organisations. However, since inspections are carried out all the time, and while I will do my best to refresh the data at least every month, it is possible that there may be a more recent report than the one published here, and I would strongly advise you to double check any information here on Ofsted's website.</p>
+    <p>If you do spot any errors or omissions, please contact me on ed.lowther at gmail dot com.</p>
+  </div>
+</body>
+</html>
