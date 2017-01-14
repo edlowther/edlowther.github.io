@@ -17,11 +17,11 @@
     <h4>Enter your postcode <input type="text" id="postcode" size=10>, or explore the map</h4>
     <p>Show nurseries rated: 
     <form id="filters">
-      <input type="checkbox" class="nurseryRating" value="large_green" checked><span class="checkboxLabel">Outstanding</span>
-      <input type="checkbox" class="nurseryRating" value="large_blue" checked><span class="checkboxLabel">Good</span>
-      <input type="checkbox" class="nurseryRating" value="large_yellow" checked><span class="checkboxLabel">Satisfactory</span>
-      <input type="checkbox" class="nurseryRating" value="large_red" checked><span class="checkboxLabel">Requires improvement</span>
-      <input type="checkbox" class="nurseryRating" value="measle_turquoise" checked><span class="checkboxLabel">No recent report found</span>
+      <input type="checkbox" class="nurseryRating" value="large_green" checked><img class="iconKey" src="http://maps.google.com/mapfiles/kml/paddle/grn-circle.png" /><span class="checkboxLabel">Outstanding</span><br />
+      <input type="checkbox" class="nurseryRating" value="large_blue" checked><img class="iconKey" src="http://maps.google.com/mapfiles/kml/paddle/blu-circle.png" /><span class="checkboxLabel">Good/meets requirements</span><br />
+      <input type="checkbox" class="nurseryRating" value="large_yellow" checked><img class="iconKey" src="http://maps.google.com/mapfiles/kml/paddle/ylw-circle.png" /><span class="checkboxLabel">Satisfactory/requires improvement</span><br />
+      <input type="checkbox" class="nurseryRating" value="large_red" checked><img class="iconKey" src="http://maps.google.com/mapfiles/kml/paddle/red-circle.png" /><span class="checkboxLabel">Inadequate/does not meet requirements</span><br />
+      <input type="checkbox" class="nurseryRating" value="measle_turquoise" checked><img class="iconKey" src="http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png" /><span class="checkboxLabel">No recent report found</span>
     </form>
     <div id="googft-mapCanvas"></div>
     <div id="googft-legend"></div>
