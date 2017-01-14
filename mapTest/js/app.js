@@ -3,7 +3,7 @@
 
 		var map; 
 		var layer; 
-		var filter = "Marker = 'measle_turquoise' OR Marker = 'large_blue'"; 
+		var filter = "Marker = 'placemarker_circle' OR Marker = 'large_blue'"; 
 		map_and_layer = initialize(map, layer, filter);
 		map = map_and_layer['map']; 
 		layer = map_and_layer['layer'];  
