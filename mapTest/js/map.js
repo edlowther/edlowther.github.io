@@ -8,8 +8,8 @@ function initialize(map, layer, filterWhere) {
       viewport.setAttribute('content', 'initial-scale=1.0, user-scalable=no');
     }
     var mapDiv = document.getElementById('googft-mapCanvas');
-    mapDiv.style.width = isMobile ? '90%' : '700px';
-    mapDiv.style.height = isMobile ? '500px' : '500px';
+    mapDiv.style.width = isMobile ? '85%' : '700px';
+    mapDiv.style.height = isMobile ? '360px' : '500px';
 //    if (isMobile) {
 //      var container = document.getElementsByClassName("container")[0];
 //      container.style.width = '100%'; 

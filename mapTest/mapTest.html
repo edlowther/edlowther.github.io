@@ -15,6 +15,10 @@
   <div class="container">
     <h2>Find a good nursery (beta)</h2>
     <h4>Enter your postcode <input type="text" id="postcode" size=10>, or explore the map</h4>
+    <div id="googft-mapCanvas"></div>
+    <div id="googft-legend"></div>
+    <div id="googft-legend-open"></div>
+    <div id="googft-legend-close"></div>
     <p>Show nurseries rated: 
     <form id="filters">
       <input type="checkbox" class="nurseryRating" value="large_green" checked><img class="iconKey" src="http://maps.google.com/mapfiles/kml/paddle/grn-circle.png" /><span class="checkboxLabel">Outstanding</span><br />
@@ -23,10 +27,6 @@
       <input type="checkbox" class="nurseryRating" value="large_red" checked><img class="iconKey" src="http://maps.google.com/mapfiles/kml/paddle/red-circle.png" /><span class="checkboxLabel">Inadequate/does not meet requirements</span><br />
       <input type="checkbox" class="nurseryRating" value="placemark_circle" checked><img class="iconKey" src="http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png" /><span class="checkboxLabel">No recent report found</span>
     </form>
-    <div id="googft-mapCanvas"></div>
-    <div id="googft-legend"></div>
-    <div id="googft-legend-open"></div>
-    <div id="googft-legend-close"></div>
     <h3>About this page</h3>
     <p>There are some excellent resources for finding Ofsted ratings for schools in your area, like <a href="http://www.locrating.com/">locrating.com</a>, and for finding childminders in a particular area, like <a href="https://www.childcare.co.uk/">childcare.co.uk</a>, but we struggled to find an easy way to explore the locations and ratings of nurseries. This seemed like a shame, because a map is especially useful in the case of nurseries, where parents may be less reliant on catchment areas and more likely to consider a location near to work or on a commute. So I decided to try to make one. </p>
     <p>The map shows the location of every organisation listed as "childcare on non-domestic premises" on Ofsted's website (which I think I am right in saying that locrating does not) and those categoriesed as nurseries (which locrating does have, but did not always seem to have the latest report for), and tries to give the most up-to-date information possible on each of these organisations. However, since inspections are carried out all the time, and while I will do my best to refresh the data at least every month, it is possible that there may be a more recent report than the one published here, and I would strongly advise you to double check any information here on Ofsted's website.</p>
