@@ -39,8 +39,13 @@
 				postcodeToTest = $.trim($('#postcode').val().toUpperCase()); 
 				var latlng = postcodeLookup(postcodeToTest); 
 				console.log(latlng); 
-				map.panTo(new google.maps.LatLng(latlng[0], latlng[1])); 
-				map.setZoom(14);
+                if (latlng) {
+                    $('.errorMessage').addClass('notDisplayed');
+                    map.panTo(new google.maps.LatLng(latlng[0], latlng[1])); 
+                    map.setZoom(14);
+                } else {
+                    $('.errorMessage').removeClass('notDisplayed');
+                }
 			}
 		}); 
 

@@ -16,7 +16,16 @@ body {
 .iconKey {
     width: 24px;
 }
+
 .container {
 	max-width: 700px; 
 	margin: 0 auto;
+}
+
+.notDisplayed {
+    display: none;
+}
+
+.errorMessage {
+    color: red;
 }
