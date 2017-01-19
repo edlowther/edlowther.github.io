@@ -52,21 +52,21 @@
                         } else {
                             $('.errorMessage').removeClass('notDisplayed');
                         }
-                    }, 
-                    error: function() {
-                        $('.errorMessage').removeClass('notDisplayed');
+                    },
+                    error: function () {
+                        var latlng = postcodeLookup(postcodeToTest);
+                        console.log(latlng);
+                        if (latlng) {
+                            $('.errorMessage').addClass('notDisplayed');
+                            map.panTo(new google.maps.LatLng(latlng[0], latlng[1]));
+                            map.setZoom(14);
+                        } else {
+                            $('.errorMessage').removeClass('notDisplayed');
+                        }
                     }
                 });
 
-//                var latlng = postcodeLookup(postcodeToTest);
-//                console.log(latlng);
-//                if (latlng) {
-//                    $('.errorMessage').addClass('notDisplayed');
-//                    map.panTo(new google.maps.LatLng(latlng[0], latlng[1]));
-//                    map.setZoom(14);
-//                } else {
-//                    $('.errorMessage').removeClass('notDisplayed');
-//                }
+
             }
         });
 
