@@ -40,7 +40,7 @@
             if (event.keyCode === 13 || event.keyCode === 32) {
                 postcodeToTest = $.trim($('#postcode').val().toUpperCase());
                 $.ajax({
-                    url: "http://api.postcodes.io/postcodes/" + postcodeToTest.replace(" ", ""),
+                    url: "https://api.postcodes.io/postcodes/" + postcodeToTest.replace(" ", ""),
                     success: function (result) {
                         console.log(result);
                         console.log(result.status);
