@@ -48,7 +48,7 @@
                             var latlng = [result.result.latitude, result.result.longitude];
                             $('.errorMessage').addClass('notDisplayed');
                             map.panTo(new google.maps.LatLng(latlng[0], latlng[1]));
-                            map.setZoom(13);
+                            map.setZoom(14);
                         } else {
                             $('.errorMessage').removeClass('notDisplayed');
                         }
@@ -59,7 +59,7 @@
                         if (latlng) {
                             $('.errorMessage').addClass('notDisplayed');
                             map.panTo(new google.maps.LatLng(latlng[0], latlng[1]));
-                            map.setZoom(12);
+                            map.setZoom(13);
                         } else {
                             $('.errorMessage').removeClass('notDisplayed');
                         }
