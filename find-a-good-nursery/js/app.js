@@ -14,21 +14,18 @@
             } else {
                 if (postcodeToTest.length > 3) {
                     postcodePart = postcodeToTest.substring(0, 4);
-                    console.log(postcodePart);
                     if (postcodePart in postcodes) {
                         return postcodes[postcodePart];
                     }
                 }
                 if (postcodeToTest.length > 2) {
                     postcodePart = postcodeToTest.substring(0, 3);
-                    console.log(postcodePart);
                     if (postcodePart in postcodes) {
                         return postcodes[postcodePart];
                     }
                 }
                 if (postcodeToTest.length > 1) {
                     postcodePart = postcodeToTest.substring(0, 2);
-                    console.log(postcodePart);
                     if (postcodePart in postcodes) {
                         return postcodes[postcodePart];
                     }
@@ -42,8 +39,6 @@
                 $.ajax({
                     url: "https://api.postcodes.io/postcodes/" + postcodeToTest.replace(" ", ""),
                     success: function (result) {
-                        console.log(result);
-                        console.log(result.status);
                         if (result.status === 200 && result.hasOwnProperty('result') && result.result.hasOwnProperty('latitude')) {
                             var latlng = [result.result.latitude, result.result.longitude];
                             $('.errorMessage').addClass('notDisplayed');
@@ -55,7 +50,6 @@
                     },
                     error: function () {
                         var latlng = postcodeLookup(postcodeToTest);
-                        console.log(latlng);
                         if (latlng) {
                             $('.errorMessage').addClass('notDisplayed');
                             map.panTo(new google.maps.LatLng(latlng[0], latlng[1]));
@@ -71,16 +65,13 @@
         });
 
         $('#filters').on('change', function () {
-            console.log("filters changed");
             var markers = [];
             $('.nurseryRating').each(function () {
                 if (this.checked) {
                     markers.push("'" + this.value + "'");
                 }
             });
-            console.log(markers);
             filter = "'Marker' IN (" + markers.join(',') + ")";
-            console.log(filter);
             layer.setOptions({
                 query: {
                     select: "col4",
