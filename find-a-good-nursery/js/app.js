@@ -48,7 +48,7 @@
                             var latlng = [result.result.latitude, result.result.longitude];
                             $('.errorMessage').addClass('notDisplayed');
                             map.panTo(new google.maps.LatLng(latlng[0], latlng[1]));
-                            map.setZoom(14);
+                            map.setZoom(13);
                         } else {
                             $('.errorMessage').removeClass('notDisplayed');
                         }
