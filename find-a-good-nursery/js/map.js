@@ -3,10 +3,10 @@ function initialize(map, layer, filterWhere) {
     google.maps.visualRefresh = true;
     var isMobile = (navigator.userAgent.toLowerCase().indexOf('android') > -1) ||
       (navigator.userAgent.match(/(iPod|iPhone|iPad|BlackBerry|Windows Phone|iemobile)/));
-    if (isMobile) {
-      var viewport = document.querySelector("meta[name=viewport]");
-      viewport.setAttribute('content', 'initial-scale=1.0, user-scalable=no');
-    }
+//    if (isMobile) {
+//      var viewport = document.querySelector("meta[name=viewport]");
+//      viewport.setAttribute('content', 'initial-scale=1.0, user-scalable=no');
+//    }
     var mapDiv = document.getElementById('googft-mapCanvas');
     mapDiv.style.width = isMobile ? '85%' : '700px';
     mapDiv.style.height = isMobile ? '360px' : '500px';
