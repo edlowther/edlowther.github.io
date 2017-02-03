@@ -138,7 +138,11 @@
                         });
                         console.log(suggestions);
                         $("#nameSearch").autocomplete("option", "source", suggestions.sort(function (a, b) {
-                            return a.label - b.label;
+                            if (a.label < b.label)
+                                return -1;
+                            if (a.label > b.label)
+                                return 1;
+                            return 0;
                         }));
                     },
                     error: function () {
