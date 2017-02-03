@@ -137,7 +137,7 @@
                             }
                         });
                         console.log(suggestions);
-                        $("#nameSearch").autocomplete("option", "source", suggestions);
+                        $("#nameSearch").autocomplete("option", "source", suggestions.sort());
                     },
                     error: function () {
                         console.log('Erroneous');
