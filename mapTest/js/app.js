@@ -137,7 +137,9 @@
                             }
                         });
                         console.log(suggestions);
-                        $("#nameSearch").autocomplete("option", "source", suggestions.sort());
+                        $("#nameSearch").autocomplete("option", "source", suggestions.sort(function (a, b) {
+                            return a.label - b.label;
+                        }));
                     },
                     error: function () {
                         console.log('Erroneous');
