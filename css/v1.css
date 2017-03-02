@@ -9,8 +9,14 @@ body {
 	background-repeat: no-repeat;
 }
 
+.columnHeader {
+    text-align: center;
+    margin: 0;
+    font-family: "BOOK ANTIQUA", "Hoefler Text", Times New Roman, Times, serif;
+}
+
 .container {
-	max-width: 700px; 
+	max-width: 800px; 
 	margin: 0 auto;
 }
 
@@ -20,12 +26,18 @@ body {
 	letter-spacing: 3px;
 }
 
+.projects {
+/*    width: 40%;*/
+/*    display: inline-block;*/
+    vertical-align: top;
+    margin: 0 4%;
+    margin-bottom: 18px;
+}
+
 .project {
 	width: 100%; 
-	/*height: 100px;*/
 	position: relative;
-	margin-bottom: 12px; 
-	padding: 5px;
+	margin: 0; 
 }
 
 .project img {
@@ -40,6 +52,13 @@ body {
 	font-weight: bold;
 }
 
+.projectHeadline {
+    margin-bottom: 0;
+}
+
+.projectSubheadline {
+    margin: 0;
+}
 
 a {
     text-decoration: none;
@@ -49,6 +68,7 @@ a:hover {
     text-decoration: underline;
 }
 
+/*
 @media (max-width: 720px) {
 	.project span {
 		display: block;
@@ -56,4 +76,15 @@ a:hover {
 	.project span .colon {
 		display: none; 
 	}
+}
+*/
+
+@media (min-width: 500px) {
+    .projects {
+        display: inline-block;
+        width: 40%;
+    }
+    .other {
+        float: right;
+    }
 }
