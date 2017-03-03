@@ -24,8 +24,9 @@ body {
 .headline {
 	color: #000;
 	font-family: "BOOK ANTIQUA", "Hoefler Text", Times New Roman, Times, serif;
-	letter-spacing: 8px;
+	letter-spacing: 12px;
     text-align: center;
+    margin-top: 12px;
 }
 
 .projects {
