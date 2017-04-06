@@ -10,19 +10,19 @@ var songData = [
         'versions': [
             {
                 'language': 'English', 
-                'songUrl': './sounds/bare necessities english.wav'
+                'songUrl': './sounds/bare necessities english.mp3'
             }, 
             {
                 'language': 'Japanese', 
-                'songUrl': './sounds/bare necessities japanese.wav'
+                'songUrl': './sounds/bare necessities japanese.mp3'
             }, 
             {
                 'language': 'Cantonese', 
-                'songUrl': './sounds/bare necessities cantonese.wav'
+                'songUrl': './sounds/bare necessities cantonese.mp3'
             }, 
             {
                 'language': 'Spanish', 
-                'songUrl': './sounds/bare necessities spanish.wav'
+                'songUrl': './sounds/bare necessities spanish.mp3'
             }
         ]
     }, 
@@ -31,23 +31,23 @@ var songData = [
         'versions': [
             {
                 'language': 'English', 
-                'songUrl': './sounds/everybody cat english.wav'
+                'songUrl': './sounds/everybody cat english.mp3'
             }, 
             {
                 'language': 'Portugese', 
-                'songUrl': './sounds/everybody cat Portuguese.wav'
+                'songUrl': './sounds/everybody cat Portuguese.mp3'
             }, 
             {
                 'language': 'Finnish', 
-                'songUrl': './sounds/everybody cat finnish.wav'
+                'songUrl': './sounds/everybody cat finnish.mp3'
             }, 
             {
                 'language': 'Hebrew', 
-                'songUrl': './sounds/everybody cat hebrew.wav'
+                'songUrl': './sounds/everybody cat hebrew.mp3'
             }, 
             {
                 'language': 'French', 
-                'songUrl': './sounds/everybody cat french.wav'
+                'songUrl': './sounds/everybody cat french.mp3'
             }
         ] 
     }, 
@@ -56,15 +56,15 @@ var songData = [
         'versions': [
             {
                 'language': 'English', 
-                'songUrl': './sounds/love tonight v1 english.wav'
+                'songUrl': './sounds/love tonight v1 english.mp3'
             }, 
             {
                 'language': 'Spanish', 
-                'songUrl': './sounds/love tonight v1 spanish.wav'
+                'songUrl': './sounds/love tonight v1 spanish.mp3'
             }, 
             {
                 'language': 'Hindi', 
-                'songUrl': './sounds/love tonight v1 hindi.wav'
+                'songUrl': './sounds/love tonight v1 hindi.mp3'
             }
         ] 
     }, 
@@ -73,19 +73,19 @@ var songData = [
         'versions': [
             {
                 'language': 'Zulu', 
-                'songUrl': './sounds/love tonight v2 zulu.wav'
+                'songUrl': './sounds/love tonight v2 zulu.mp3'
             }, 
             {
                 'language': 'Russian', 
-                'songUrl': './sounds/love tonight v2 russian.wav'
+                'songUrl': './sounds/love tonight v2 russian.mp3'
             }, 
             {
                 'language': 'Arabic', 
-                'songUrl': './sounds/love tonight v2 arabic.wav'
+                'songUrl': './sounds/love tonight v2 arabic.mp3'
             }, 
             {
                 'language': 'Portuguese', 
-                'songUrl': './sounds/love tonight v2 portuguese.wav'
+                'songUrl': './sounds/love tonight v2 portuguese.mp3'
             }
         ] 
     }, 
@@ -94,19 +94,19 @@ var songData = [
         'versions': [
             {
                 'language': 'English', 
-                'songUrl': './sounds/supercalifragilisticexpialidocious english.wav'
+                'songUrl': './sounds/supercalifragilisticexpialidocious english.mp3'
             }, 
             {
                 'language': 'Swedish', 
-                'songUrl': './sounds/supercalifragilisticexpialidocious swedish.wav'
+                'songUrl': './sounds/supercalifragilisticexpialidocious swedish.mp3'
             }, 
             {
                 'language': 'Japanese', 
-                'songUrl': './sounds/supercalifragilisticexpialidocious japanese.wav'
+                'songUrl': './sounds/supercalifragilisticexpialidocious japanese.mp3'
             }, 
             {
                 'language': 'Portuguese', 
-                'songUrl': './sounds/supercalifragilisticexpialidocious portuguese.wav'
+                'songUrl': './sounds/supercalifragilisticexpialidocious portuguese.mp3'
             }
         ] 
     }, 
@@ -115,11 +115,11 @@ var songData = [
         'versions': [
             {
                 'language': 'German', 
-                'songUrl': './sounds/spoonfull of sugar german.wav'
+                'songUrl': './sounds/spoonfull of sugar german.mp3'
             }, 
             {
                 'language': 'French', 
-                'songUrl': './sounds/spoonfull of sugar french.wav'
+                'songUrl': './sounds/spoonfull of sugar french.mp3'
             }
         ] 
     }
