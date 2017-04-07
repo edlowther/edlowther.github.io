@@ -1,7 +1,10 @@
-h2, h3, p, ol {
-	font-family: Helvetica,Arial,freesans,sans-serif; 
-	color: #505050;
-	line-height: 24px;
+h2,
+h3,
+p,
+ol {
+    font-family: Helvetica, Arial, freesans, sans-serif;
+    color: #505050;
+    line-height: 24px;
 }
 
 .container {
@@ -15,4 +18,11 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    #map {
+        width: 80%;
+        margin: 0 auto;
+    }
 }
