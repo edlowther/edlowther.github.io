@@ -6,14 +6,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
   <title>Songs in translation</title>
-<!--  <link rel="stylesheet" href="css/styles.css?v=1.0">-->
+  <link rel="stylesheet" href="v1.css">
 
 </head>
 
 <body>
-    <h2 class="languageLister">Loading...</h2>
-    <button class="playPause">Pause</button>
-    <button class="skip">Skip song</button>
+    <div class="container">
+        <h2 class="languageLister">Loading...</h2>
+        <button class="playPause">Pause</button>
+        <button class="skip">Skip song</button>
+        <div class="languageContainer hidden">
+            <p>Choose a language:</p>
+            <div class="randomButton selected">Random selection</div>
+            <div class="languageSelector">
+            </div>
+        </div>
+    </div>
     <script src="js/lib/buffer-loader.js"></script>
     <script src="js/v1.js"></script>
 </body>

@@ -2,7 +2,8 @@ window.onload = init;
 var context;
 var bufferLoader;
 var isPlaying = false;
-var lastSongPlayed;
+var randomOn = false;
+var songsPlayed = [];
 
 var songData = [
     {
@@ -145,6 +146,8 @@ function init() {
     );
 
   bufferLoader.load();
+    
+    
 }
 
 var delayRandomness;
@@ -169,6 +172,7 @@ function finishedLoading(bufferList) {
         }
         value.source.start(0);
         isPlaying = true;
+        randomOn = true;
         $('.skip').prop( "disabled", false );
     })
     delayRandomness = setTimeout(startRandomness, 4000);
@@ -177,13 +181,15 @@ function finishedLoading(bufferList) {
 var songSwitcher;
 
 function startRandomness () {
+    initialiseSongSelector();
+    $('.languageContainer').show();
     console.log('randomness started');
     if (songSwitcher) {
         clearInterval(songSwitcher);
     }
     songSwitcher = setInterval(function(){ 
         console.log('tick');
-        if (isPlaying) {
+        if (isPlaying && randomOn) {
             var versionToSwitchOn = Math.floor(Math.random() * songData[songToPlay].versions.length);
             $.each(songData[songToPlay].versions, function(index, version) {
                 if (index === versionToSwitchOn) {
@@ -222,10 +228,15 @@ $('.skip').on('click', function() {
     }
     
     var nextSong = Math.floor(Math.random() * songData.length);
-    while (nextSong === songToPlay) {
+    if (songsPlayed.length == songData.length - 1) {
+        songsPlayed = [];
+    }
+    
+    while (nextSong === songToPlay || $.inArray(nextSong, songsPlayed) >= 0) {
         console.log(nextSong);
         nextSong = Math.floor(Math.random() * songData.length);
     }
+    songsPlayed.push(songToPlay);
     songToPlay = nextSong;
     
     var songUrls = []; 
@@ -243,5 +254,38 @@ $('.skip').on('click', function() {
     );
 
   bufferLoader.load();
+    $('.languageContainer').hide();
     
 }) 
+
+function initialiseSongSelector() {
+    $('.languageSelector').empty();
+    $.each(songData[songToPlay].versions, function(index, value) {
+        var htmlString = '<div class="languageButton" index="' + index + '">' + value.language + '</div>';
+        $('.languageSelector').append($(htmlString));
+    })
+    $('.languageButton').on('click', function() {
+        $('.selected').removeClass('selected');
+        $(this).addClass('selected');
+        var buttonIndex = parseInt($(this).attr('index'));
+        randomOn = false;
+        
+        $.each(songData[songToPlay].versions, function(index, version) {
+            if (index === buttonIndex) {
+                console.log('match')
+                version.gainNode.gain.value = 1;
+                $('.languageLister').text(songData[songToPlay].songName + ': ' + version.language);
+            } else {
+                version.gainNode.gain.value = 0;
+            }
+        })
+    })
+    
+    $('.randomButton').on('click', function() {
+        if (!randomOn) {
+            $('.selected').removeClass('selected');
+            $(this).addClass('selected');
+            randomOn = true;
+        }
+    })
+}
