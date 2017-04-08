@@ -109,7 +109,7 @@ var songData = [
         ]
     },
     {
-        'songName': 'Just a spoonfull of sugar',
+        'songName': 'Just a spoonful of sugar',
         'versions': [
             {
                 'language': 'German',
