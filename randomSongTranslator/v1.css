@@ -1,0 +1,25 @@
+.languageButton, .randomButton {
+    display: inline;
+    padding: 4px; 
+    margin: 2px; 
+    background-color: #e0e0e0;
+}
+
+.selected {
+    background-color: #F49C54;
+}
+
+.hidden {
+    display: none;
+}
+
+h2, h3, p, div {
+    font-family: Helvetica, Arial, freesans, sans-serif;
+    color: #505050;
+    line-height: 24px;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 700px;
+}
