@@ -162,7 +162,8 @@ var player = {
                 $.each(songData[player.songToPlay].versions, function (index, version) {
                     if (index === versionToSwitchOn) {
                         version.gainNode.gain.value = 1;
-                        $('.songTitle').text(songData[player.songToPlay].songName + ': ' + version.language);
+                        $('.songTitle').text(songData[player.songToPlay].songName);
+                        $('.songLanguage').text(version.language);
                     } else {
                         version.gainNode.gain.value = 0;
                     }
@@ -200,7 +201,8 @@ var player = {
         $('.languageContainer').hide(1000);
         this.isSkipping = true;
         this.randomReady = false;
-        $('.songTitle').text('Loading...');
+        $('.songTitle').text('Loading');
+        $('.songLanguage').text('...');
         this.stopAllCurrentAudio();
         this.getNewSongToPlay();
     }, 
@@ -220,7 +222,8 @@ var player = {
                 if (index === buttonIndex) {
                     console.log('match')
                     version.gainNode.gain.value = 1;
-                    $('.songTitle').text(songData[player.songToPlay].songName + ': ' + version.language);
+                    $('.songTitle').text(songData[player.songToPlay].songName);
+                    $('.songLanguage').text(version.language);
                 } else {
                     version.gainNode.gain.value = 0;
                 }
@@ -261,7 +264,8 @@ function finishedLoading(bufferList) {
         value.gainNode.connect(context.destination);
         if (index === 0) {
             value.gainNode.gain.value = 1;
-            $('.songTitle').text(songData[player.songToPlay].songName + ': ' + value.language);
+            $('.songTitle').text(songData[player.songToPlay].songName);
+            $('.songLanguage').text(value.language);
         } else {
             value.gainNode.gain.value = 0;
         }

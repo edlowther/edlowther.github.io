@@ -19,7 +19,26 @@ h2, h3, p, div {
     line-height: 24px;
 }
 
+.songTitle {
+    letter-spacing: 1px;
+    font-family: Baskerville,Baskerville Old Face,Hoefler Text,Garamond,Times New Roman,serif; 
+}
+
+.songLanguage {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+div {
+    line-height: 48px;
+}
+
 .container {
     margin: 0 auto;
     max-width: 700px;
+    text-align: center;
+}
+
+.randomButton {
+    margin-bottom: 8px;
 }
