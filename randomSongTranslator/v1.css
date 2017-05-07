@@ -1,8 +1,13 @@
-.languageButton, .randomButton {
-    display: inline;
-    padding: 4px; 
+.languageButton, .randomButton, .playPause, .skip {
+    display: inline-block;
+    padding: 4px 8px; 
     margin: 2px; 
     background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+.playPause {
+    width: 50px;
 }
 
 .selected {
@@ -30,15 +35,11 @@ h2, h3, p, div {
 }
 
 div {
-    line-height: 48px;
+/*    line-height: 48px;*/
 }
 
 .container {
     margin: 0 auto;
     max-width: 700px;
     text-align: center;
-}
-
-.randomButton {
-    margin-bottom: 8px;
 }

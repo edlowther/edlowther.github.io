@@ -1,12 +1,14 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
-  <title>Songs in translation</title>
-  <link rel="stylesheet" href="v1.css">
+    <title>Songs in translation</title>
+    <link rel="stylesheet" href="v1.css">
 
 </head>
 
@@ -14,8 +16,8 @@
     <div class="container">
         <h2 class="songTitle">Loading</h2>
         <h1 class="songLanguage">...</h1>
-        <button class="playPause" disabled="true">Play</button>
-        <button class="skip" disabled="true">Skip to random song</button>
+        <div class="playPause" disabled="true">Play</div>
+        <div class="skip" disabled="true">Skip to random song</div>
         <div class="languageContainer hidden">
             <p>Choose a language:</p>
             <div class="randomButton selected">Random shuffle</div>
@@ -26,4 +28,5 @@
     <script src="js/lib/buffer-loader.js"></script>
     <script src="js/v1.js"></script>
 </body>
+
 </html>
