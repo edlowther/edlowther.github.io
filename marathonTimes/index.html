@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Twelve interesting performances in the London marathon</title>
+    <link rel="stylesheet" type="text/css" href="v1.css" />
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
+    <script type="text/javascript" src="./js/data.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>Twelve interesting performances in the London marathon</h2>
+        <img src="img/Lynn%20Bushell.png" />
+        <p>Lynn Bushell, pictured right, ran the 2017 London marathon in a quite extraordinary way.</p>
+        <p>She passed every 5km checkpoint along the course almost exactly 30 minutes and 12 seconds after the last one, only deviating a few seconds either way each time.</p>
+        <p>She had a plan for the race, and managed to stick to it religiously. Her efforts won her a very respectable overall time of four hours and 14 minutes, and she took 827th place in her age and gender category.</p>
+        <p>Not one of the 41,300 other runners who completed the course that day, not even the elite runners, ran as consistently as her. Here is her average speed across the course on a chart.</p>
+        <div class="chart">
+            <svg class="bushell" width="700" height="200"></svg>
+        </div>
+        <p>Ms Bushell's race data is not missing a single split-time checkpoint.</p>
+        <p>Virtually all marathon runners who do miss checkpoints do so for entirely innocent reasons, either because of a technical failure or they somehow passed by the sensors without cutting the course.</p>
+        <p>As an example of this, here's a chart showing the speed of another extremely consistent runner who missed a few checkpoints, the locations of which are highlighted in red.</p>
+        <div class="chart">
+            <svg class="samways" width="700" height="200"></svg>
+        </div>
+        <p>But here is the race data for three other runners.</p>
+        <div class="chart">
+            <svg class="one" width="700" height="200"></svg>
+        </div>
+        <div class="chart">
+            <svg class="two" width="700" height="200"></svg>
+        </div>
+        <div class="chart">
+            <svg class="three" width="700" height="200"></svg>
+        </div>
+        <p>What is going on?</p>
+        <h3>Map of suspected course cutting locations</h3>
+        <iframe width="100%" height="400" frameborder="0" src="https://edlowther.carto.com/viz/d703bd72-34f5-11e7-8ab8-0e3a376473ab/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+        <p>As the map above makes clear, the London marathon route doubles back on itself in a couple of places.</p>
+        <p>A few runners may have found the temptation to skip over the barrier and skip out much of the course overwhelming.</p>
+        <p>The most egregious example of this is the runner who apparently turned left immediately after Tower Bridge, cutting about nine miles from their route - this is shown in the first chart of inconsistent times above.</p>
+        <p>But the most popular place to cut may be further along, in the Docklands. Five runners seem to have dodged about a three-mile loop by taking a short cut near Heron Quays.</p>
+        <p>In all, my analysis of the marathon data turned up 11 questionable or downright suspicious sets of split times, a tiny fraction of the many thousands of runners who complete the full course. I am not naming the runners involved - maybe they told all their friends and family that they had taken a short cut, or it is possible that some major technical malfunction is to blame.</p>
+        <p>Two weeks on from the race, just two of those questionable sets of results have been removed from the official race data. Their continuing presence undermines the phenomenal achievements of Ms Bushell and her peers.</p>
+        <p>Not one of the three sets of times shown on the charts above has been deleted.</p>
+        <p>By <a href="https://twitter.com/edlowther">@edlowther</a>, with inspiration from <a href="https://www.marathoninvestigation.com/">Derek Murphy</a> and the New York Times' <a href="http://www.nytimes.com/2009/11/01/sports/01runners.html">Andy Lehren</a></p>
+    </div>
+</body>
+
+</html>
