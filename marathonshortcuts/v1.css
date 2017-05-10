@@ -21,7 +21,7 @@ a:hover {
 }
 
 @media (max-width: 600px) {
-    #map {
+    .mapContainer {
         width: 80%;
         margin: 0 auto;
     }

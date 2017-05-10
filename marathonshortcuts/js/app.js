@@ -7,7 +7,7 @@
                     top: 20,
                     right: 20,
                     bottom: 40,
-                    left: 50
+                    left: 38
                 },
                 width = +svg.attr("width") - margin.left - margin.right,
                 height = +svg.attr("height") - margin.top - margin.bottom,
@@ -59,7 +59,7 @@
                 .attr('x', x(21.0975))
                 .attr('dx', '-0.2em')
                 .attr("dy", "0.5em")
-                .attr('y', height + 10.5)
+                .attr('y', height + 11)
                 .attr('class', 'annotation axisAnnotation')
                 .text('Half');
             
@@ -76,7 +76,7 @@
                 .attr("fill", "#000")
                 .attr("transform", "rotate(-90)")
                 .attr("y", 6)
-                .attr("dy", "-3.2em")
+                .attr("dy", "-2.8em")
                 .attr("dx", "0.71em")
                 .attr("text-anchor", "end")
                 .attr('class', 'annotation')
