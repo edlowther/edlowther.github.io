@@ -27,8 +27,33 @@ a:hover {
     }
 }
 
-img {
+.imageContainer {
     float: right;
+    max-width: 346px;
+    margin: 8px; 
+}
+
+.imageCaption {
+    font-size: 14px;
+    margin-top: 2px;
+}
+
+.intro {
+    font-weight: bold;
+}
+
+.credits {
+    font-style: italic;
+}
+
+.annotation {
+    font-size: 12px; 
+    font-family: Helvetica, Arial, freesans, sans-serif;
+}
+
+.axisAnnotation {
+    font-size: 10px; 
+    
 }
 
 .imgRow, .imgRowLarge {
