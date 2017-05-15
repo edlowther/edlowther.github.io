@@ -20,8 +20,13 @@ a:hover {
     text-decoration: underline;
 }
 
+#map {
+    height: 800px;
+}
+
 @media (max-width: 600px) {
     #map {
+        height: 400px; 
         width: 80%;
         margin: 0 auto;
     }
