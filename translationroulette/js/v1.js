@@ -200,6 +200,7 @@ var player = {
     skip: function () {
         $('.languageContainer').hide(1000);
         this.isSkipping = true;
+        this.randomOn = true;
         this.randomReady = false;
         $('.songTitle').text('Loading');
         $('.songLanguage').text('...');
