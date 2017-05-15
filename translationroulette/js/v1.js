@@ -125,8 +125,9 @@ var songData = [
 
 var player = {
     isPlaying: false,
-    isSkipping: false, 
+    isSkipping: false,
     songsLoaded: false,
+    loadingInterval: false,
     randomOn: true,
     randomReady: false,
     songsPlayed: [],
@@ -145,8 +146,8 @@ var player = {
         this.songToPlay = nextSong;
         this.loadVersions();
     },
-    getReadyToRandom: function() {
-        setTimeout(function() {
+    getReadyToRandom: function () {
+        setTimeout(function () {
             player.randomReady = true;
             player.initialiseVersionSelectorButtons();
         }, 4000);
@@ -185,6 +186,16 @@ var player = {
         })
     },
     loadVersions: function () {
+        var loadingIntervalIndex = 0;
+        $('.songLanguage').addClass('loading');
+        this.loadingInterval = setInterval(function () {
+            loadingIntervalIndex += 1;
+            loadingText = '.';
+            for (var i = 0; i < loadingIntervalIndex % 3; i++) {
+                loadingText += '.';
+            }
+            $('.songLanguage').text(loadingText);
+        }, 150);
         var songUrls = [];
         $.each(songData[this.songToPlay].versions, function (index, value) {
             songUrls.push(value.songUrl);
@@ -206,7 +217,7 @@ var player = {
         $('.songLanguage').text('...');
         this.stopAllCurrentAudio();
         this.getNewSongToPlay();
-    }, 
+    },
     initialiseVersionSelectorButtons: function () {
         $('.randomButton').addClass('selected');
         $('.languageSelector').empty();
@@ -254,6 +265,7 @@ var delayRandomness;
 
 function finishedLoading(bufferList) {
     console.log('finished loading');
+    $('.songLanguage').removeClass('loading');
     $.each(songData[player.songToPlay].versions, function (index, value) {
         value.source = context.createBufferSource();
         value.source.buffer = bufferList[index];
@@ -266,6 +278,7 @@ function finishedLoading(bufferList) {
         if (index === 0) {
             value.gainNode.gain.value = 1;
             $('.songTitle').text(songData[player.songToPlay].songName);
+            clearInterval(player.loadingInterval);
             $('.songLanguage').text(value.language);
         } else {
             value.gainNode.gain.value = 0;
