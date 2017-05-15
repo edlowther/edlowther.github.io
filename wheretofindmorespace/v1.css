@@ -20,13 +20,25 @@ a:hover {
     text-decoration: underline;
 }
 
-#map {
+.map {
     height: 800px;
 }
 
 @media (max-width: 600px) {
-    #map {
+    .map {
         height: 400px; 
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+.londonMap {
+    height: 520px;
+}
+
+@media (max-width: 600px) {
+    .londonMap {
+        height: 250px; 
         width: 80%;
         margin: 0 auto;
     }
