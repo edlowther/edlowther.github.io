@@ -1,0 +1,43 @@
+.hidden {
+    display: none;
+}
+
+h2, h3, p, div {
+    font-family: Helvetica, Arial, freesans, sans-serif;
+    color: #505050;
+    line-height: 24px;
+}
+
+.title {
+    letter-spacing: 1px;
+    font-family: Baskerville,Baskerville Old Face,Hoefler Text,Garamond,Times New Roman,serif; 
+}
+
+.songLanguage {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.results {
+    text-align: left;
+    width: 300px;
+    margin: 0 auto;
+    box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08);    
+}
+
+.result {
+    line-height: 12px;
+    padding: 8px;
+    margin: 0;
+    color: #222;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 700px;
+    text-align: center;
+}
