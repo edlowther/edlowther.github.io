@@ -5,11 +5,13 @@ architects,Architect,arrogant,pretentious,underpaid,important
 CEOs,CEO,greedy,important,tall,evil
 chefs,Chef,angry,mean,arrogant,rude
 childminders,Childminder,expensive,,,
+consultants,Consultant,arrogant,expensive,rude,
 counselors,Counselor,useless,,,
 dentists,Dentist,mean,rude,expensive,
 developers,Developer,arrogant,grumpy,afraid of sql,
 doctors,Doctor,useless,stupid,patronising,attractive
 engineers,Engineer,weird,boring,arrogant,dumb
+entrepreneurs,Entrepreneur,important to the economy,rich,successful,important to our economy
 firefighters,Firefighter,hot,buff,arrogant,cocky
 firemen,Fireman,hot,arrogant,buff,attractive
 flight attendants,Flight attendant,hot,rude,old,mean
@@ -23,6 +25,7 @@ lawyers,Lawyer,expensive,rude,unhappy,mean
 librarians,Librarian,rude,mean,liberal,hot
 mechanics,Mechanic,shady,expensive,rude,underpaid
 models,Model,thin,tall,ugly,useful in ecology
+musicians,Musician,hot,skinny,attractive,weird
 nurses,Nurse,fat,rude,mean to each other,mean to patients
 personal trainers,Personal trainer,expensive,hot,mean,attractive
 pharmacists,Pharmacist,slow,high up,important,rude
