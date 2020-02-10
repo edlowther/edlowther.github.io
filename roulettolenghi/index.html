@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Roulettolenghi</title>
+  <meta name="description" content="The random Ottolenghi recipe selector">
+
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+  <div class='container'>
+    <h1 class='headline'>ROULETTOLENGHI</h1>
+    <form id='container__form'>
+      <h2 class='subheadline'>I would like a random recipe selection from the following book<span id='plural'>s</span>:</h2>
+      <p class='list-heading book-name'>Plenty <input type="checkbox" name="Plenty" checked="checked"></p>
+      <p class='list-heading book-name'>Plenty More <input type="checkbox" name="Plenty-More" checked="checked"></p>
+      <p class='list-heading book-name'>Simple <input type="checkbox" name="Simple" checked="checked"></p>
+      <p class='list-heading book-name'>Sweet <input type="checkbox" name="Sweet" checked="checked"></p>
+      <div class='button-container'><input type="submit" class="submit-button" value="Go!"><div>
+    </form>
+    <div id='container__result'>
+      <p class='list-heading'></p>
+      <p class='the-word-from subheadline'>from</p>
+      <p class='book-name list-heading'></p>
+    </div>
+  </div>
+  <script src="js/recipe-selector.js"></script>
+</body>
+</html>
