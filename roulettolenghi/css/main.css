@@ -77,7 +77,7 @@ a:hover {
 }
 
 #container__result {
-  margin-top: 4.5rem;
+  margin-top: 4vw;
 }
 
 @media screen and (max-width: 450px) {
