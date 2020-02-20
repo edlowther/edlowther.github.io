@@ -11,7 +11,7 @@
 .subheadline {
   text-align: center;
   font-weight: normal;
-  font-size: 2vw;
+  font-size: 1.5vw;
 }
 
 /* .list-heading {
@@ -25,13 +25,13 @@
 .list-heading, .list-heading__link {
   font-family: "Gill Sans", sans-serif;
   color: #E51636;
-  font-size: 2.5vw;
+  font-size: 1.8vw;
   text-align: center;
 }
 
 input.submit-button {
   font-family: "Gill Sans", sans-serif;
-  font-size: 2.5vw;
+  font-size: 1.8vw;
   display: block;
   margin: 0 auto;
   padding: 1vw 2vw;
@@ -44,7 +44,7 @@ input.submit-button:hover {
 }
 
 #ingredient-filter {
-  font-size: 2vw;
+  font-size: 1.5vw;
 }
 
 a:link {
@@ -77,7 +77,7 @@ a:hover {
 }
 
 #container__result {
-  margin-top: 4vw;
+  margin-top: 3vw;
 }
 
 @media screen and (max-width: 450px) {
