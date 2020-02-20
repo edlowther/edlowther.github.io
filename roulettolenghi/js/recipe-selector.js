@@ -6,6 +6,7 @@
   var resultBookName = resultDiv.getElementsByClassName('book-name')[0];
   var submitButton = document.getElementsByClassName('submit-button')[0];
   var pluralisesCTA = document.getElementById('plural');
+  var singularisesCTA = document.getElementById('singular');
 
   var plentyRecipes = ["Poached baby vegetables with caper mayonnaise", "Spicy Moroccan carrot salad", "Beetroot, orange and black olive salad", "Roasted parsnips and sweet potatoes with caper vinaigrette", "Two-potato vindaloo", "Beetroot, yoghurt and preserved lemon relish", "Royal potato salad", "Surprise tatin", "Jerusalem artichokes with manouri and basil oil", "Sweet potato wedges with lemongrass cr\u00e8me fra\u00eeche", "Parsnip dumplings in broth", "Seasonal tempura", "Sweet potato cakes", "Tamara's ratatouille", "Multi-vegetable paella", "Marinated pepper salad with pecorino", "Very full tart", "Scrambled smoked duck eggs on sourdough", "Shakshuka", "Leek fritters", "Caramelized garlic tart", "Stuffed onions", "Fried leeks", "Black pepper tofu", "Garlic soup and harissa", "Broccoli and Gorgonzola pie", "Broccolini and sweet sesame salad", "Stuffed cabbage", "Smoky frittata", "Purple sprouting broccoli with rice noodles", "Cabbage and kohlrabi salad", "Sweet winter slaw", "Savoy cabbage and Parmesan skin soup", "Brussels sprouts and tofu", "Saffron cauliflower", "Mushroom ragout with poached duck egg", "B\u00e1nh x\u00e8o", "Stuffed portobello with melting Taleggio", "Marinated mushrooms with walnut and tahini yoghurt", "Aubergine with buttermilk sauce", "Soba noodles with aubergine and mango", "Aubergine tricolore (and more)", "Grilled vegetable soup", "Lentils with grilled aubergine", "Aubergine croquettes", "Burnt aubergine with tahini", "Mushroom lasagne", "Wild mushroom parcel", "Marinated buffalo mozzarella and tomato", "Quinoa and grilled sourdough salad", "Tomato, semolina and coriander soup", "Tomato party", "Quesadillas", "Herb-stuffed tomatoes", "Halloween souffl\u00e9s", "Roasted butternut squash with sweet spices, lime and green chilli", "Mixed grill with parsley oil", "Stuffed courgettes", "Courgette and carrot salad", "Baked eggs with yoghurt and chilli", "Chard and saffron omelettes", "Lettuce salad", "Swiss chard chickpea and tamarind stew", "Chard cakes with sorrel sauce", "Green pancakes with lime butter", "Watercress pistachio and orange blossom salad", "Egg, spinach and pecorino pizza", "Caramelized endive with Gruyere", "Vine leaf, herb and yoghurt pie", "Nutty endive with Roquefort", "Bittersweet salad", "Avocado quinoa and broad bean salad", "Coconut rice with sambal and okra", "Lemon and aubergine risotto", "Farro and roasted pepper salad", "Steamed rice with herbs (or, actually, herbs with rice)", "Yoghurt flatbreads with barley and mushrooms", "Barley and pomegranate salad", "Kisir", "Cardamom rice with poached eggs and yoghurt", "Freekeh pilaf", "Itamar bulgur pilaf", "Mango and coconut rice salad", "Quinoa salad with dried Iranian lime", "Cucumber salad with smashed garlic and ginger", "Lemony globe artichokes", "Asparagus fennel and beetroot with verjus", "Caramelized fennel with goat's curd", "Globe artichokes with crushed broad beans", "Artichoke gratin", "Okra with tomato, lemon and coriander", "Green gazpacho", "Asparagus mimosa", "Chargrilled asparagus", "Asparagus vichyssoise", "Mee goreng", "Soba noodles with wakame", "Lemon and goat's cheese ravioli", "Crunchy pappardelle", "Pasta and fried courgette salad", "Green couscous", "Saffron tagliatelle with spiced butter", "The ultimate winter couscous", "Mushroom and herb polenta", "Sweetcorn Polenta", "Mixed beans with many spices and lovage", "Broad bean burgers", "Gado-gado", "Green bean salad with mustard seeds and tarragon", "Warm glass noodles and edamame beans", "Hot yoghurt and broad bean soup", "Figs with basil goat's curd and pomegranate vinaigrette", "Goat's cheese souffl\u00e9s with vanilla-poached peach", "Quince and Dolcelatte salad", "Pear crostini", "Dates and Turkish ewe's cheese", "Watermelon and feta", "Puy lentil galettes", "Hummus with ful", "Chickpea saut\u00e9 with Greek yoghurt", "Fried butter beans with feta sorrel and sumac", "Celeriac and lentils with hazelnut and mint", "Chickpea, tomato and bread soup", "Green lentils, asparagus and watercress", "Spiced red lentils with cucumber yoghurt", "Castelluccio lentils with tomatoes and Gorgonzola", "Socca"]
 
@@ -42,17 +43,30 @@
         recipes = recipes.concat(recipeNamesAndSources);
       }
     });
-    if (recipes.length > 0) {
-      selectedRecipe = recipes[Math.floor(Math.random() * recipes.length)];
-      resultRecipe.innerHTML = selectedRecipe.recipeName;
-      resultTheWordFrom.style.display = 'block';
-      resultBookName.innerHTML = selectedRecipe.recipeSource.replace('-', ' ');
-      submitButton.value = 'Another...';
-    }
-    else {
+    if (recipes.length === 0) {
       resultRecipe.innerHTML = 'You need to select at least one book!';
       resultTheWordFrom.style.display = 'none';
       resultBookName.innerHTML = '';
+    }
+    else {
+      var ingredientFilter = document.getElementById('ingredient-filter').value;
+      if (ingredientFilter.replace(' ', '').length > 0) {
+        recipes = recipes.filter(function(recipe) {
+          return recipe.recipeName.toLowerCase().indexOf(ingredientFilter.toLowerCase()) >= 0;
+        })
+      }
+      if (recipes.length > 0) {
+        selectedRecipe = recipes[Math.floor(Math.random() * recipes.length)];
+        resultRecipe.innerHTML = selectedRecipe.recipeName;
+        resultTheWordFrom.style.display = 'block';
+        resultBookName.innerHTML = selectedRecipe.recipeSource.replace('-', ' ');
+        submitButton.value = 'Another...';
+      }
+      else {
+        resultRecipe.innerHTML = 'There are no recipes with that mentioned in the title!';
+        resultTheWordFrom.style.display = 'none';
+        resultBookName.innerHTML = '';
+      }
     }
   });
 
@@ -63,9 +77,11 @@
     }, 0);
     if (numberOfBooksSelected === 1) {
       pluralisesCTA.style.display = 'none';
+      singularisesCTA.style.display = 'inline';
     }
     else {
       pluralisesCTA.style.display = 'inline';
+      singularisesCTA.style.display = 'none';
     }
   });
 })();

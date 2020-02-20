@@ -6,6 +6,7 @@
 
   <title>Roulettolenghi</title>
   <meta name="description" content="The random Ottolenghi recipe selector">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="css/main.css">
 
@@ -15,11 +16,12 @@
   <div class='container'>
     <h1 class='headline'>ROULETTOLENGHI</h1>
     <form id='container__form'>
-      <h2 class='subheadline'>I would like a random recipe selection from the following book<span id='plural'>s</span>:</h2>
-      <p class='list-heading book-name'>Plenty <input type="checkbox" name="Plenty" checked="checked"></p>
-      <p class='list-heading book-name'>Plenty More <input type="checkbox" name="Plenty-More" checked="checked"></p>
-      <p class='list-heading book-name'>Simple <input type="checkbox" name="Simple" checked="checked"></p>
-      <p class='list-heading book-name'>Sweet <input type="checkbox" name="Sweet" checked="checked"></p>
+      <h2 class='subheadline'>Give me a random recipe selection from <span id='singular'>this book</span><span id='plural'>one of these books</span>:</h2>
+      <p class='list-heading'><label class='list-heading book-name' for='Plenty'>Plenty</label> <input type="checkbox" id="Plenty" name="Plenty" checked="checked"></p>
+      <p class='list-heading'><label class='list-heading book-name' for='Plenty-More'>Plenty More</label> <input type="checkbox" id="Plenty-More" name="Plenty-More" checked="checked"></p>
+      <p class='list-heading'><label class='list-heading book-name' for='Simple'>Simple</label> <input type="checkbox" id="Simple" name="Simple" checked="checked"></p>
+      <p class='list-heading'><label class='list-heading book-name' for='Sweet'>Sweet</label> <input type="checkbox" id="Sweet"  name="Sweet" checked="checked"></p>
+      <p class='subheadline'>Optional: select only recipes with titles that mention a particular ingredient <input type="text" id="ingredient-filter" name="ingredient-filter" placeholder='e.g. aubergine' autocomplete='off'></p>
       <div class='button-container'><input type="submit" class="submit-button" value="Go!"><div>
     </form>
     <div id='container__result'>
