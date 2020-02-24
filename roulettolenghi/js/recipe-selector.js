@@ -62,6 +62,7 @@
         a.classList.add('list-heading');
         var recipeNameTextNode = document.createTextNode(selectedRecipe.recipeName);
         a.appendChild(recipeNameTextNode);
+        resultRecipe.innerHTML = '';
         resultRecipe.appendChild(a);
         resultTheWordFrom.style.display = 'block';
         resultBookName.innerHTML = selectedRecipe.recipeSource.replace('-', ' ');
