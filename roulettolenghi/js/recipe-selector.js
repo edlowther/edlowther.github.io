@@ -59,7 +59,7 @@
         selectedRecipe = recipes[Math.floor(Math.random() * recipes.length)];
         var a = document.createElement('a');
         a.href = 'https://www.google.com/search?q=Ottolenghi+' + selectedRecipe.recipeName.replace(/ /g, '+');
-        a.target = '_blank'
+        a.target = '_blank';
         a.classList.add('list-heading');
         var recipeNameTextNode = document.createTextNode(selectedRecipe.recipeName);
         a.appendChild(recipeNameTextNode);
