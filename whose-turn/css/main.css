@@ -1,0 +1,40 @@
+* {
+  font-family: "Mars Regular","Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #505050;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.headline {
+  font-family: "Gill Sans", sans-serif;
+  font-size: 3vw;
+  font-weight: normal;
+  letter-spacing: 1.5vw;
+  text-align: center;
+  color: #E33685;
+}
+
+.assignee-name {
+  color: #77b7b7;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 1.8vw;
+  text-align: center;
+}
+
+
+#container__result {
+  margin-top: 3vw;
+}
+
+@media screen and (max-width: 450px) {
+  .headline  {
+    font-size: 7vw;
+    letter-spacing: 2.5vw;
+  }
+  .assignee-name {
+    font-size: 5vw;
+  }
+}
